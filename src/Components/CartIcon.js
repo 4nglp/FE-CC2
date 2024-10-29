@@ -1,4 +1,3 @@
-// src/Components/CartIcon.js
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -8,8 +7,13 @@ function CartIcon({ totalQuantity }) {
   return (
     <div id="cart-icon">
       <Link to="/cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span className="badge badge-danger">{totalQuantity}</span>
+        <i class="fa-solid fa-cart-shopping" style={{ color: "black" }}></i>
+        <span
+          className="badge badge-danger"
+          style={{ color: "white", backgroundColor: "red" }}
+        >
+          {totalQuantity}
+        </span>
       </Link>
     </div>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import CartItem from "../Components/CartItem";
-import ProductsApi from "../api/products";
 import { connect } from "react-redux";
 import { clearCart } from "../store/actions/actions";
 
