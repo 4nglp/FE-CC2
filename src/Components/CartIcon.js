@@ -7,7 +7,7 @@ function CartIcon({ totalQuantity }) {
   return (
     <div id="cart-icon">
       <Link to="/cart">
-        <i class="fa-solid fa-cart-shopping" style={{ color: "black" }}></i>
+        <i className="fa-solid fa-cart-shopping" style={{ color: "black" }}></i>
         <span
           className="badge badge-danger"
           style={{ color: "white", backgroundColor: "red" }}
@@ -21,7 +21,10 @@ function CartIcon({ totalQuantity }) {
 
 const mapStateToProps = (state) => {
   return {
-    totalQuantity: state.cart.reduce((total, item) => total + item.quantity, 0),
+    totalQuantity: state.cart.reduce(
+      (total, item) => total + parseInt(item.quantity, 10),
+      0
+    ),
   };
 };
 
